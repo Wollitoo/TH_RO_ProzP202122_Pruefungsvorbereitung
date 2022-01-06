@@ -15,18 +15,14 @@ int main()
 
 	char bez[20] = "Nepomuk-Brunnen";
 
-	printf("Gefunden 0 / !Gefunden 1: %i", suche(PointsOfInterest, 1, bez));
+	printf("Gefunden 1 / !Gefunden 0: %i", suche(PointsOfInterest, 1, bez));
 
 	return 0;
 }
 
 void eingabe(int fp, struct s_punkt *fn) {
-
-	char Bez[LEN] = { ' ' };
-
-
 	printf("Bitte geben Sie den Ortsnamen an.\n");
-	scanf("%199s", fn[fp].Bezeichnung);
+	scanf("%200s", fn[fp].Bezeichnung);
 	printf("Bitte geben Sie die X-Kord ein.\n");
 	scanf("%f", &fn[fp].x);
 	printf("Bitte geben Sie die Y-Kord ein.\n");
@@ -36,11 +32,11 @@ void eingabe(int fp, struct s_punkt *fn) {
 int suche(struct s_punkt* fn, int num, char* bez) {
 	for (int i = 0; i < num; i++) {
 		if ((strcmp(fn[i].Bezeichnung, bez)) == 0) {
-			return 0;
+			return 1;
 		}
 	}
 
-	return 1;
+	return 0;
 }
 
 
