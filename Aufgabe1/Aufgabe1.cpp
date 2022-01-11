@@ -26,7 +26,7 @@ void eingabe(int fp, struct s_punkt *fn) {
 	printf("Bitte geben Sie die X-Kord ein.\n");
 	scanf("%f", &fn[fp].x);
 	printf("Bitte geben Sie die Y-Kord ein.\n");
-	scanf("%f", &fn[fp].y);
+	scanf("%lf", &fn[fp].y);
 }
 
 int suche(struct s_punkt* fn, int num, char* bez) {
