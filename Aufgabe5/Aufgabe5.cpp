@@ -38,9 +38,6 @@ int istListeSortiert(t_listenkopf* li) {
 			tmp = tmp->next;
 		}
 	}
-	else {
-		return 0; // Keine Element, also sortiert
-	}
 	return 1; // alles richtig sortiert
 }
 
